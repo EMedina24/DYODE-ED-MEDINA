@@ -88,6 +88,20 @@ query  {
     }
   }
 
+  allGraphCmsBanner {
+    edges {
+      node {
+        bannerHeader
+        bannerSubHeader
+        cta
+        ctaLink
+        bannerPic {
+          url
+        }
+      }
+    }
+  }
+
 
 }
 
@@ -106,6 +120,7 @@ const heros = data.allGraphCmsHomePageHero.edges;
 const products =data.allGraphCmsProduct.edges;
 const socialPics = data.allGraphCmsSocialBlock.edges;
 const logo = data. allGraphCmsBranding.edges;
+const banner = data. allGraphCmsBanner.edges;
 
 console.log( navigation)
 
@@ -116,7 +131,7 @@ console.log( navigation)
      <Hero heros ={heros}/>
      <Blocks collections={collections}/>
      <ProdSlider products ={products}/>
-     <Banner/>
+     <Banner banner={banner}/>
      <SocialBlocks socialPics ={socialPics}/>
   </Layout>
 );

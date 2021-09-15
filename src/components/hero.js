@@ -22,7 +22,7 @@ return(
       spaceBetween={50}
       slidesPerView={1}
       autoplay={{
-        "delay": 2500,
+        "delay": 1500,
         "disableOnInteraction": false
       }}
     >
@@ -33,9 +33,9 @@ return(
         <img className="heroImg" src= {hero.node.heroImages[0].url}/>
 
         <div className=" w-full m-auto mt-40 sm:w-auto sm:m-20 text-center absolute z-50 sm:top-48 sm:left-80  top-0 ">
-        <h1 className="sm:m-5 m-auto text-green-900">{hero.node.header}</h1>
-        <h2 className="sm:m-5 m-auto text-green-900">{hero.node.subHeader}</h2>
-        <button className="sm:m-5 m-auto ">{hero.node.cta}</button>
+        <h1 className="sm:m-5 m-auto" style={{color:`${hero.node.fontColor.hex}`}}>{hero.node.header}</h1>
+        <h2 className="sm:m-5 m-auto " style={{color:`${hero.node.fontColor.hex}`}}>{hero.node.subHeader}</h2>
+        <button className="  ctaButton mt-10 sm:mt-0 sm:m-5 m-auto">{hero.node.cta}</button>
         </div>
       
         </div>

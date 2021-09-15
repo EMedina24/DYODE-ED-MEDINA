@@ -58,3 +58,14 @@ h2{
 max-height: 629px;    
 min-height: 629px; 
   }
+
+  .ctaButton{
+    width: 129px;
+height: 43px;
+background-color: black;
+color:white;
+  }
+
+  .spec-item{
+    display: flex;
+  }

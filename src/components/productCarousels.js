@@ -54,7 +54,7 @@ return(
           <h2 class="text-gray-900 title-font text-lg font-medium">{product.node.productTitle}</h2>
           <p class="text-gray-500 text-xs tracking-widest title-font mb-1">{product.node.productDescription}</p>
           
-          <p class="mt-1">{product.node.productPrice}</p>
+          <p class="mt-1  font-extrabold text-green-900">{product.node.productPrice}</p>
         </div>
       </div>
       </SwiperSlide>
