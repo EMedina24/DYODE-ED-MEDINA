@@ -64,8 +64,22 @@ min-height: 629px;
 height: 43px;
 background-color: black;
 color:white;
+background-color: #10504F;
+  }
+
+
+  .heroctaButton{
+    width: 129px;
+height: 43px;
+background-color: black;
+color:white;
+;
   }
 
   .spec-item{
     display: flex;
+  }
+
+  .DyodeGreen{
+    background-color: #10504F;
   }

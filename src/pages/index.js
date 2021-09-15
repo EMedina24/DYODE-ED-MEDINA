@@ -122,7 +122,7 @@ const socialPics = data.allGraphCmsSocialBlock.edges;
 const logo = data. allGraphCmsBranding.edges;
 const banner = data. allGraphCmsBanner.edges;
 
-console.log( navigation)
+console.log( socialPics)
 
   return(
 

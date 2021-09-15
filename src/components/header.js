@@ -27,10 +27,10 @@ return(
   <>
 { !isMobile||!BrowserView?(
  <>
-<section class="  p-4 h-9 w-full sm:flex justify-center bg-black m-auto">
+<section class="  p-4 h-9 w-full sm:flex justify-center bg-black m-auto fixed z-50    ">
 <p class="  font-bold text-xs text-white">FREE SHIPPING ON ALL ORDERS OVER $75</p>
 </section>
-<header class="text-gray-600 body-font bg-green-800 pt-5 sm:block hidden">
+<header class="text-gray-600 body-font DyodeGreen pt-5 sm:block hidden fixed z-40 w-full mt-5">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
      <img src={logo[0].node.logo.url}/>
@@ -52,9 +52,10 @@ return(
 
 
 { isMobile||MobileView?(
-
-<nav class="bg-green-900 shadow dark:bg-gray-800 sm:hidden block">
-        <div class="container px-6 py-4 mx-auto">
+  <>
+ 
+<nav class="DyodeGreen shadow dark:bg-gray-800 sm:hidden block fixed w-full z-40">
+        <div class="container px-6 py-4 mx-auto mt-10">
             <div class="md:flex md:items-center md:justify-between">
                 <div class="flex items-center justify-between">
                     <div class="flex md:hidden ">
@@ -95,7 +96,7 @@ return(
         </div>
     </nav>
 
-
+</>
 ): null}
 
 
