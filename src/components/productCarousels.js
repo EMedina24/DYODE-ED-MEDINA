@@ -76,13 +76,4 @@ return(
 
 
 
-
-ProdSlider.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-ProdSlider.defaultProps = {
-  siteTitle: ``,
-}
-
 export default ProdSlider

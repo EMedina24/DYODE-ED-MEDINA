@@ -12,6 +12,38 @@ import SocialBlocks from "../components/social"
 
 
 
+
+
+
+
+
+
+const IndexPage = ({data}) => {
+
+const navigation = data.allGraphCmsNavigation.edges;
+const collections = data.allGraphCmsCollection.edges;
+const heros = data.allGraphCmsHomePageHero.edges;
+const products =data.allGraphCmsProduct.edges;
+const socialPics = data.allGraphCmsSocialBlock.edges;
+const logo = data. allGraphCmsBranding.edges;
+const banner = data. allGraphCmsBanner.edges;
+
+
+  return(
+
+  <Layout  logo={logo }navLinks = {navigation}>
+    <Seo title="Home" />
+     <Hero heros ={heros}/>
+     <Blocks collections={collections}/>
+     <ProdSlider products ={products}/>
+     <Banner banner={banner}/>
+     <SocialBlocks socialPics ={socialPics}/>
+  </Layout>
+);
+
+}
+
+export default IndexPage
 export const query = graphql`
 query  {
 
@@ -106,36 +138,3 @@ query  {
 }
 
 `;
-
-
-
-
-
-
-const IndexPage = ({data}) => {
-
-const navigation = data.allGraphCmsNavigation.edges;
-const collections = data.allGraphCmsCollection.edges;
-const heros = data.allGraphCmsHomePageHero.edges;
-const products =data.allGraphCmsProduct.edges;
-const socialPics = data.allGraphCmsSocialBlock.edges;
-const logo = data. allGraphCmsBranding.edges;
-const banner = data. allGraphCmsBanner.edges;
-
-console.log( socialPics)
-
-  return(
-
-  <Layout  logo={logo }navLinks = {navigation}>
-    <Seo title="Home" />
-     <Hero heros ={heros}/>
-     <Blocks collections={collections}/>
-     <ProdSlider products ={products}/>
-     <Banner banner={banner}/>
-     <SocialBlocks socialPics ={socialPics}/>
-  </Layout>
-);
-
-}
-
-export default IndexPage

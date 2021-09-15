@@ -14,7 +14,7 @@ import {
 
 
 
-const Header = ({ siteTitle,navLinks,logo }) => {
+const Header = ({ navLinks,logo }) => {
 
   const [Open, setOpen] = React.useState(false);
 
@@ -54,7 +54,7 @@ return(
 { isMobile||MobileView?(
   <>
  
-<nav class="DyodeGreen shadow dark:bg-gray-800 sm:hidden block fixed w-full z-40">
+<nav class="DyodeGreen sm:hidden block fixed w-full z-40">
         <div class="container px-6 py-4 mx-auto mt-10">
             <div class="md:flex md:items-center md:justify-between">
                 <div class="flex items-center justify-between">
@@ -114,12 +114,5 @@ return(
 
 
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

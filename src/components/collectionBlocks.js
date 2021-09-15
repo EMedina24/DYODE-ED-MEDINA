@@ -42,13 +42,4 @@ return(
 
 
 
-
-Blocks.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Blocks.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Blocks

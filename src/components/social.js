@@ -39,12 +39,5 @@ return(
 
 
 
-SocialBlocks.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-SocialBlocks.defaultProps = {
-  siteTitle: ``,
-}
 
 export default SocialBlocks

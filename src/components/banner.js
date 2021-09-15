@@ -29,14 +29,4 @@ return(
  
 
 
-
-
-Banner.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Banner.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Banner

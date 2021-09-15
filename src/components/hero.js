@@ -29,7 +29,7 @@ return(
        {heros.map((hero) => (
       <SwiperSlide>
         <div className="w-full  relative ">
-        <img className="heroImg" src= {hero.node.heroImages[0].url}/>
+        <img className="heroImg sm:h-full" src= {hero.node.heroImages[0].url}/>
         <div className=" w-full m-auto mt-40 sm:w-auto sm:m-20 text-center absolute z-50 sm:top-48 sm:left-80  top-0 ">
         <h1 className="sm:m-5 m-auto" style={{color:`${hero.node.fontColor.hex}`}}>{hero.node.header}</h1>
         <h2 className="sm:m-5 m-auto " style={{color:`${hero.node.fontColor.hex}`}}>{hero.node.subHeader}</h2>
@@ -52,13 +52,5 @@ return(
 
 
 
-
-Hero.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Hero.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Hero
