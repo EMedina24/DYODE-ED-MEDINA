@@ -1,0 +1,54 @@
+fragment HomePageHero on HomePageHero {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  header
+  subHeader
+  cta
+  ctaLink
+  fontColor {
+    ... on Color {
+      hex
+      rgba {
+        ... on RGBA {
+          r
+          g
+          b
+          a
+        }
+      }
+      css
+    }
+  }
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  heroImages {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+}

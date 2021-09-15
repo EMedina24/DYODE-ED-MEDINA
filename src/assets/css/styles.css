@@ -13,6 +13,8 @@ p{
 
 h1{
     font-family: 'Pacifico', cursive;
+    font-size: xxx-large !important;
+    font-weight: 200;
 }
 
 h2{
@@ -50,4 +52,9 @@ h2{
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .heroImg{
+max-height: 629px;    
+min-height: 629px; 
   }

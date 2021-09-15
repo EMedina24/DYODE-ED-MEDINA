@@ -14,71 +14,51 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation]);
 
 
-const ProdSlider = () => {
-
+const ProdSlider = ({ products}) => {
+console.log("products",products)
 
 return(
   <>
+
+<div class="flex justify-center">
+  <h1>New Arrivals</h1>
+</div>
+
  <Swiper
       loop={true}
       spaceBetween={30}
       navigation={true}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      slidesPerView={2}
+      breakpoints={{
+        "640": {
+          "slidesPerView": 2,
+          
+        },
+        "768": {
+          "slidesPerView": 3,
+        
+        },
+        "1024": {
+          "slidesPerView": 4,
+          
+        }
+      }}
     >
+       {products.map((product) => (
       <SwiperSlide>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+      <div class="sm:w-full p-4 w-28">
+        <a class="block relative h-full rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={product.node.productPic.url}/>
         </a>
         <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
+          <h2 class="text-gray-900 title-font text-lg font-medium">{product.node.productTitle}</h2>
+          <p class="text-gray-500 text-xs tracking-widest title-font mb-1">{product.node.productDescription}</p>
+          
+          <p class="mt-1">{product.node.productPrice}</p>
         </div>
       </div>
       </SwiperSlide>
-      
-      <SwiperSlide>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
-        </div>
-      </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
-        </div>
-      </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
-        </div>
-      </div>
-      </SwiperSlide>
-     
+         ))}
     </Swiper>
 
   
