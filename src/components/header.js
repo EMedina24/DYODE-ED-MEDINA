@@ -27,10 +27,10 @@ return(
   <>
 { !isMobile||!BrowserView?(
  <>
-<section class="  p-4 h-9 w-full sm:flex justify-center bg-black m-auto fixed z-50    ">
+<section class="  p-2 h-9 w-full sm:flex justify-center bg-black m-auto fixed z-50    ">
 <p class="  font-bold text-xs text-white">FREE SHIPPING ON ALL ORDERS OVER $75</p>
 </section>
-<header class="text-gray-600 body-font DyodeGreen pt-5 sm:block hidden fixed z-40 w-full mt-5">
+<header class="text-gray-600 body-font DyodeGreen pt-2 sm:block hidden fixed z-40 w-full mt-5">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
      <img src={logo[0].node.logo.url}/>
